@@ -20,10 +20,10 @@ const usersLimiter = RateLimit({
 router.get('/', usersLimiter, (req, res) => {
   const name = req.query.name || ''
 
-  // Vulnerable: string concatenation into SQL query
-  const sql = `SELECT id, name FROM users WHERE name = '${name}'`
+  // Use a parameterized query to avoid SQL injection
+  const sql = 'SELECT id, name FROM users WHERE name = ?'
 
-  db.all(sql, (err, rows) => {
+  db.all(sql, [name], (err, rows) => {
     if (err) return res.status(500).json({ error: err.message })
     res.json({ rows })
   })
