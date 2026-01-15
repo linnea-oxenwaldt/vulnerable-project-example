@@ -1,1 +1,4 @@
-export const githubToken = 'ghp_abcdefghijklmnopqrstuvwxyz1234567890'
+export const secrets = {
+  github: 'ghp_1234567890abcdefghijklmnopqrstuvwxyzABCDE',
+  aws: 'AKIAIOSFODNN7EXAMPLE'
+}
