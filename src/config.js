@@ -1,4 +1,4 @@
 export const secrets = {
-  github: 'ghp_1234567890abcdefghijklmnopqrstuvwxyzABCDE',
+  github: 'ghp_0123456789abcdefghijklmnopqrstuvwxyz',
   aws: 'AKIAIOSFODNN7EXAMPLE'
 }
